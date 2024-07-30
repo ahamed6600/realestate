@@ -1,0 +1,155 @@
+﻿<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<link href="css/styles.css" rel="stylesheet" />
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" >
+<header>
+<div class="header-container"><a class="logo" href="#">Real Estate</a>
+<nav>
+<ul class="menu">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Properties</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+
+<div class="hamburger" onclick="toggleMenu()">
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+</div>
+</header>
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+
+<div class="smallmenu">
+<ul>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Properties</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+</ul>
+</div>
+</div>
+</header>
+<!-- Main Slider -->
+
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image: url('slider1.jpg');">
+<h2>Featured Property 1</h2>
+</div>
+
+<div class="swiper-slide" style="background-image: url('slider2.jpg');">
+<h2>Featured Property 2</h2>
+</div>
+
+<div class="swiper-slide" style="background-image: url('slider3.jpg');">
+<h2>Featured Property 3</h2>
+</div>
+</div>
+<!-- Add Pagination -->
+
+<div class="swiper-pagination">&nbsp;</div>
+<!-- Add Navigation -->
+
+<div class="swiper-button-next">&nbsp;</div>
+
+<div class="swiper-button-prev">&nbsp;</div>
+</div>
+
+<div class="container"><!-- Top Properties Section -->
+<section class="property-section">
+<h2>Top Properties</h2>
+
+<div class="swiper-container property-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide property-item"><img alt="Top Property 1" src="top-property1.jpg" />
+<div class="property-info">
+<h3>Modern Family Home</h3>
+
+<p>$500,000 - 3 beds � 2 baths � 1,800 sq ft</p>
+</div>
+</div>
+
+<div class="swiper-slide property-item"><img alt="Top Property 2" src="top-property2.jpg" />
+<div class="property-info">
+<h3>Luxury Condo</h3>
+
+<p>$750,000 - 2 beds � 2 baths � 1,200 sq ft</p>
+</div>
+</div>
+<!-- Add more property items here --></div>
+<!-- Add Pagination -->
+
+<div class="swiper-pagination">&nbsp;</div>
+<!-- Add Navigation -->
+
+<div class="swiper-button-next">&nbsp;</div>
+
+<div class="swiper-button-prev">&nbsp;</div>
+</div>
+</section>
+<!-- New Properties Section -->
+
+<section class="property-section">
+<h2>New Properties</h2>
+
+<div class="swiper-container property-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide property-item"><img alt="New Property 1" src="new-property1.jpg" />
+<div class="property-info">
+<h3>Cozy Cottage</h3>
+
+<p>$300,000 - 2 beds � 1 bath � 1,000 sq ft</p>
+</div>
+</div>
+
+<div class="swiper-slide property-item"><img alt="New Property 2" src="new-property2.jpg" />
+<div class="property-info">
+<h3>Urban Apartment</h3>
+
+<p>$450,000 - 1 bed � 1 bath � 800 sq ft</p>
+</div>
+</div>
+<!-- Add more property items here --></div>
+<!-- Add Pagination -->
+
+<div class="swiper-pagination">&nbsp;</div>
+<!-- Add Navigation -->
+
+<div class="swiper-button-next">&nbsp;</div>
+
+<div class="swiper-button-prev">&nbsp;</div>
+</div>
+</section>
+</div>
+
+<footer>
+<p>&copy; 2023 Real Estate Website. All rights reserved.</p>
+</footer>
+<!-- Swiper JS --><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        function toggleMenu() {
+            const menu = document.querySelector('.smallmenu');
+            menu.classList.toggle('active');
+        }
+    </script>

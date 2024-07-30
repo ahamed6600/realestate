@@ -1,0 +1,368 @@
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<!-- Swiper CSS -->
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet" />
+<style type="text/css">body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+        .logo img {
+            height: 50px; /* Adjust the height of the logo as needed */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            margin: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .menu.active {
+            display: flex;
+        }
+        @media (min-width: 768px) {
+            .menu {
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+            }
+            .hamburger {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .swiper-slide h2 {
+                font-size: 1.5em;
+            }
+            .contact-form button {
+                width: 100%;
+            }
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .hamburger {
+                display: flex;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+                display: none;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+            margin: 20px 0;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .swiper-slide h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+        .property-section {
+            margin: 20px 0;
+        }
+        .property-section h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .property-slider {
+            position: relative;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: #007BFF;
+        }
+        .property-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .property-item img {
+            width: 100%;
+            height: auto;
+        }
+        .property-info {
+            padding: 15px;
+            background: #fff;
+        }
+        .property-info h3 {
+            margin: 0;
+        }
+        .contact-form {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .contact-form h2 {
+            margin: 0 0 15px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+</style>
+<header>
+<div class="header-container"><a class="logo" href="#"><img alt="Real Estate Logo" src="logo.png" /> Real Estate </a>
+<div class="hamburger" onclick="toggleMenu()">
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+
+<div>&nbsp;</div>
+</div>
+
+<nav>
+<ul class="menu">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Properties</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- Main Slider -->
+
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide" style="background-image: url('slider1.jpg');">
+<h2>Featured Property 1</h2>
+</div>
+
+<div class="swiper-slide" style="background-image: url('slider2.jpg');">
+<h2>Featured Property 2</h2>
+</div>
+
+<div class="swiper-slide" style="background-image: url('slider3.jpg');">
+<h2>Featured Property 3</h2>
+</div>
+</div>
+<!-- Add Pagination -->
+
+<div class="swiper-pagination">&nbsp;</div>
+<!-- Add Navigation -->
+
+<div class="swiper-button-next">&nbsp;</div>
+
+<div class="swiper-button-prev">&nbsp;</div>
+</div>
+
+<div class="container"><!-- Top Properties Section -->
+<section class="property-section">
+<h2>Top Properties</h2>
+
+<div class="swiper-container property-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide property-item"><img alt="Top Property 1" src="top-property1.jpg" />
+<div class="property-info">
+<h3>Modern Family Home</h3>
+
+<p>$500,000 - 3 beds � 2 baths � 1,800 sq ft</p>
+</div>
+</div>
+
+<div class="swiper-slide property-item"><img alt="Top Property 2" src="top-property2.jpg" />
+<div class="property-info">
+<h3>Luxury Condo</h3>
+
+<p>$750,000 - 2 beds � 2 baths � 1,200 sq ft</p>
+</div>
+</div>
+<!-- Add more property items here --></div>
+<!-- Add Pagination -->
+
+<div class="swiper-pagination">&nbsp;</div>
+<!-- Add Navigation -->
+
+<div class="swiper-button-next">&nbsp;</div>
+
+<div class="swiper-button-prev">&nbsp;</div>
+</div>
+</section>
+<!-- New Properties Section -->
+
+<section class="property-section">
+<h2>New Properties</h2>
+
+<div class="swiper-container property-slider">
+<div class="swiper-wrapper">
+<div class="swiper-slide property-item"><img alt="New Property 1" src="new-property1.jpg" />
+<div class="property-info">
+<h3>Cozy Cottage</h3>
+
+<p>$300,000 - 2 beds � 1 bath � 1,000 sq ft</p>
+</div>
+</div>
+
+<div class="swiper-slide property-item"><img alt="New Property 2" src="new-property2.jpg" />
+<div class="property-info">
+<h3>Spacious Loft</h3>
+
+<p>$600,000 - 2 beds � 2 baths � 1,500 sq ft</p>
+</div>
+</div>
+<!-- Add more property items here --></div>
+<!-- Add Pagination -->
+
+<div class="swiper-pagination">&nbsp;</div>
+<!-- Add Navigation -->
+
+<div class="swiper-button-next">&nbsp;</div>
+
+<div class="swiper-button-prev">&nbsp;</div>
+</div>
+</section>
+<!-- Contact Form -->
+
+<section class="contact-form">
+<h2>Contact Us</h2>
+
+<form action="#" method="post"><label for="name">Name</label> <input id="name" name="name" required="" type="text" /> <label for="email">Email</label> <input id="email" name="email" required="" type="email" /> <label for="message">Message</label><textarea id="message" name="message" required="" rows="5"></textarea><button type="submit">Send Message</button></form>
+</section>
+</div>
+
+<footer>
+<p>&copy; 2024 Real Estate Agency. All rights reserved.</p>
+</footer>
+<!-- Swiper JS --><script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script><script>
+        // Initialize Swiper for Main Slider
+        var mainSwiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        // Initialize Swiper for Property Sliders
+        var propertySwipers = document.querySelectorAll('.property-slider');
+        propertySwipers.forEach(function(slider) {
+            new Swiper(slider, {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+        });
+
+        // Toggle Menu for Mobile
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active');
+        }
+    </script>

@@ -1,0 +1,211 @@
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title>
+<style type="text/css">body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            z-index: 1000;
+        }
+        header .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 10px 0 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .button {
+            background: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: #0056b3;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .property-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .property-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .property-item:hover {
+            transform: scale(1.05);
+        }
+        .property-item img {
+            width: 100%;
+            height: auto;
+        }
+        .property-info {
+            padding: 15px;
+            background: #fff;
+        }
+        .property-info h2 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .property-info p {
+            color: #555;
+        }
+        .contact-form {
+            background: #f7f7f7;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .contact-form h2 {
+            margin: 0 0 15px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .contact-form button:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 0;
+            }
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .contact-form button {
+                width: 100%;
+            }
+        }
+</style>
+<header>
+<div class="container">
+<div class="logo">Real Estate</div>
+
+<nav>
+<ul>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Properties</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section class="hero">
+<div class="container">
+<h1>Your Dream Home Awaits</h1>
+
+<p>Find the perfect property with our curated listings and expert guidance.</p>
+<a class="button" href="#properties">View Listings</a></div>
+</section>
+
+<div class="container">
+<section class="property-list" id="properties">
+<div class="property-item"><img alt="Modern Family Home" src="property1.jpg" />
+<div class="property-info">
+<h2>Modern Family Home</h2>
+
+<p>$500,000 - 3 beds � 2 baths � 1,800 sq ft</p>
+</div>
+</div>
+
+<div class="property-item"><img alt="Luxury Condo" src="property2.jpg" />
+<div class="property-info">
+<h2>Luxury Condo</h2>
+
+<p>$750,000 - 2 beds � 2 baths � 1,200 sq ft</p>
+</div>
+</div>
+
+<div class="property-item"><img alt="Cozy Cottage" src="property3.jpg" />
+<div class="property-info">
+<h2>Cozy Cottage</h2>
+
+<p>$300,000 - 2 beds � 1 bath � 1,000 sq ft</p>
+</div>
+</div>
+</section>
+
+<section class="contact-form">
+<h2>Contact Us</h2>
+
+<form action="#" method="post"><label for="name">Name</label> <input id="name" name="name" required="" type="text" /> <label for="email">Email</label> <input id="email" name="email" required="" type="email" /> <label for="message">Message</label><textarea id="message" name="message" required="" rows="5"></textarea><button type="submit">Send Message</button></form>
+</section>
+</div>
+
+<footer>
+<p>&copy; 2024 Real Estate Agency. All rights reserved.</p>
+</footer>
